@@ -39,9 +39,8 @@ The first thing you need to do is to initialize a SogamoAPI session with your pr
 	
 	example: sogamoAPI.startSessionWithAPIKey("e45f72965e0042f79b3d8ff24ab96826", "player@facebook.com", null);
 
-You can't set the facebookId: parameter  to null, if that information is unavailable send sogamoAPI.DEVICE_UUID. We however strongly recommend that you include the Facebook ID of the user when starting the session. This will allow you to gain insight into how your users behave across all other Sogamo-linked applications that they use. Obtaining the user's Facebook ID is easy with the [Facebook SDK](https://github.com/facebook/facebook-android-sdk).
+You cannot set the facebookId: parameter to null. The function will throw an exception if you do that. If that information is unavailable, please send `sogamoAPI.DEVICE_UUID` instead. We, however, strongly recommend that you include the Facebook ID of the user when starting the session. This will allow you to gain insight into how your users behave across all other Sogamo-linked applications that they use. Obtaining the user's Facebook ID is easy with the [Facebook SDK](https://github.com/facebook/facebook-android-sdk).
 
-*Note: you can't set   USERS_FACEBOOK_ID_OR_DEVICE_UUID null. The function will through an exception if you pass null.
 ## Tracking Events ##
 After initializing the SogamoAPI singleton object, you are ready to track events. This can be done with the following method:
 
