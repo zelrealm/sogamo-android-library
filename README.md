@@ -37,7 +37,9 @@ The first thing you need to do is to initialize a SogamoAPI session with your pr
 	SogamoAPI sogamoAPI = SogamoAPI.getInstance(getApplicationContext());
 	sogamoAPI.startSessionWithAPIKey(API_KEY, USERS_FACEBOOK_ID_OR_DEVICE_UUID, USERS_ADDITIONAL_DETAILS);
 	
-	example: sogamoAPI.startSessionWithAPIKey("e45f72965e0042f79b3d8ff24ab96826", "player@facebook.com", null);
+For example: 
+	
+	sogamoAPI.startSessionWithAPIKey("e45f72965e0042f79b3d8ff24ab96826", "example-player@gmail.com", null);
 
 You cannot set the facebookId: parameter to null. The function will throw an exception if you do that. If that information is unavailable, please send `sogamoAPI.DEVICE_UUID` instead. We, however, strongly recommend that you include the Facebook ID of the user when starting the session. This will allow you to gain insight into how your users behave across all other Sogamo-linked applications that they use. Obtaining the user's Facebook ID is easy with the [Facebook SDK](https://github.com/facebook/facebook-android-sdk).
 
